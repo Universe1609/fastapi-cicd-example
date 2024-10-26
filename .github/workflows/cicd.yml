@@ -25,6 +25,8 @@ jobs:
         uses: azure/container-apps-deploy-action@v1
         with:
           appSourcePath: ${{ github.workspace }}/src
+          _dockerfilePathKey_: _dockerfilePath_
+          imageToBuild: acrcontainerappterraformexample.azurecr.io/container-app-example:${{ github.sha }}
           acrName: ${{ secrets.AZURE_ACR_NAME }}
           acrUsername: ${{ secrets.AZURE_ACR_USERNAME }}
           acrPassword: ${{ secrets.AZURE_ACR_PASSWORD }}
