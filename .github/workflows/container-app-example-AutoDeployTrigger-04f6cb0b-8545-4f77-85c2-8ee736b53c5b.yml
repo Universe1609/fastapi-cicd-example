@@ -3,12 +3,12 @@ name: Trigger auto deployment for container-app-example
 # When this action will be executed
 on:
   # Automatically trigger it when detected changes in repo
-  push:
-    branches: 
-      [ master ]
-    paths:
-    - '**'
-    - '.github/workflows/container-app-example-AutoDeployTrigger-04f6cb0b-8545-4f77-85c2-8ee736b53c5b.yml'
+  #push:
+  #  branches: 
+  #    [ master ]
+  #  paths:
+  #  - '**'
+  #  - '.github/workflows/container-app-example-AutoDeployTrigger-04f6cb0b-8545-4f77-85c2-8ee736b53c5b.yml'
 
   # Allow manual trigger 
   workflow_dispatch:      
