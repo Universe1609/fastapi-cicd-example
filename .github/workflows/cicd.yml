@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,6 +23,8 @@ jobs:
         with:
           appSourcePath: ${{ github.workspace }}/src
           acrName: ${{ secrets.AZURE_ACR_NAME }}
+          acrUsername: ${{ secrets.AZURE_ACR_USERNAME }}
+          acrPassword: ${{ secrets.AZURE_ACR_PASSWORD }}
           containerAppName: ${{ secrets.AZURE_CONTAINER_APP_NAME }}
           resourceGroup: ${{ secrets.AZURE_RSG_NAME }}
 
