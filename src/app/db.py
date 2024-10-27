@@ -8,7 +8,7 @@ from pytz import timezone as tz
 
 load_dotenv()
 # Database url if none is passed the default one is used
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg2://copilot:copilot_pass@localhost:4321/fastapi-test")
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./test.db")
 
 # SQLAlchemy
 engine = create_engine(DATABASE_URL)
