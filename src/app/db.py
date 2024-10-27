@@ -8,7 +8,7 @@ from pytz import timezone as tz
 
 load_dotenv()
 # Database url if none is passed the default one is used
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./test.db")
+DATABASE_URL = os.getenv("DATABASE_URL", "")
 
 # SQLAlchemy
 engine = create_engine(DATABASE_URL)
