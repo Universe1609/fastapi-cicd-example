@@ -5,6 +5,7 @@ from contextlib import asynccontextmanager
 from app.api import notes, ping
 from app.db import engine, metadata, database
 from dotenv import load_dotenv
+import os
 
 
 load_dotenv()
