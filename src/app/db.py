@@ -12,8 +12,7 @@ DATABASE_URL = os.getenv("DATABASE_URL", "")
 
 # SQLAlchemy
 engine = create_engine(DATABASE_URL)
-print(DATABASE_URL)
-print(f"Conexion a la base de datos: {DATABASE_URL}")
+
 metadata = MetaData()
 notes = Table(
     "notes",

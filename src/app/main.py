@@ -4,7 +4,14 @@ from contextlib import asynccontextmanager
 
 from app.api import notes, ping
 from app.db import engine, metadata, database
+from dotenv import load_dotenv
 
+
+load_dotenv()
+# Database url if none is passed the default one is used
+DATABASE_URL = os.getenv("DATABASE_URL", "")
+print(DATABASE_URL)
+print(f"Conexion a la base de datos: {DATABASE_URL}")
 metadata.create_all(engine)
 
 app = FastAPI()
